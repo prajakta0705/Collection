@@ -1,5 +1,7 @@
 package com.collection;
 
+import java.io.*;
+import java.lang.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -7,7 +9,7 @@ import java.util.Iterator;
 
 public class ArrayListDemo {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws NumberFormatException, IOException {
 		//To store the elements use collection interface
 		Collection<Integer> values = new ArrayList<Integer>();
 	
@@ -31,7 +33,17 @@ public class ArrayListDemo {
 			System.out.print(ir.next() +"\t");
 			
 		}
-	}
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		System.out.print("\n \n enter object=");
+		int result=Integer.parseInt(br.readLine());
+
+		boolean b=values.contains(result);
+		if(b==true)
+			System.out.println("\n"+ result + " is present");
+		else
+			System.out.println(result + " is not present");
+		}
+	
 
 
 }
