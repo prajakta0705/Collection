@@ -35,3 +35,6 @@ public class VectorDemo {
 		System.out.println("Second capacity is="+ values.capacity());
 	}
 }
+
+
+
