@@ -8,7 +8,9 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+
 public class SortingDemo {
+
 	public static void main(String args[]) throws NumberFormatException, IOException
 	{
 		List<Integer> values=new ArrayList<>();
@@ -27,19 +29,18 @@ public class SortingDemo {
 		//sortinng in ascending order
 		System.out.println("Sorting in ascending order");
 		Collections.sort(values);
-		Iterator<Integer> i=values.iterator();
-		while(i.hasNext())
-		{
-			System.out.println(i.next());
-		}
+		display(values);
 		
 		//sorting in descending order
 		System.out.println("Sorting in descending order");
 		Collections.reverse(values);
-		Iterator<Integer> ir=values.iterator();
-		while(ir.hasNext())
+		display(values);
+	}
+	static void display(List<Integer> values)
+	{
+		for(Integer v:values)
 		{
-			System.out.println(ir.next());
+			System.out.println(v);
 		}
 	}
 
